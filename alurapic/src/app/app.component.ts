@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -15,5 +16,10 @@ export class AppComponent {
       url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lioness_Etosha_NP.jpg/500px-Lioness_Etosha_NP.jpg",
       description: "Leoa"
     }
-  ]
+  ];
+
+  constructor(http: HttpClient) {
+    console.log(http);
+  }
+
 }
