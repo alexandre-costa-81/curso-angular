@@ -1,6 +1,7 @@
-import { Photo } from './../../models/Photo.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
+import { Photo } from './../../models/Photo.model';
 
 const API = 'http://localhost:3000';
 
