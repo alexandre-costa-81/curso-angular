@@ -10,9 +10,7 @@ import { PhotoService } from '../photo/photo.service';
 export class PhotoListComponent implements OnInit {
   photos: Photo[] = [];
 
-  constructor(private photoService: PhotoService) {
-
-  }
+  constructor(private photoService: PhotoService) {}
 
   ngOnInit(): void {
     this.photoService.listFromUser('Flavio').subscribe(photos => this.photos = photos);
