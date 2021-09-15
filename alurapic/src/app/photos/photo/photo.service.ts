@@ -12,7 +12,7 @@ export class PhotoService {
 
   constructor(private http: HttpClient) {}
 
-  listFromUser(username: string) {
-    return this.http.get<Photo[]>(API + '/photos');
+  listFromUser(userName: string) {
+    return this.http.get<Photo[]>(API + '/photos?userName=' + userName);
   }
 }
