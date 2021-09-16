@@ -37,6 +37,12 @@
       "email": "jose@mail.com",
       "password": "$2a$10$EGaQitIM2Whktp4j7uYu4ONSlL.FvQBMIyRerV/FHh7qKuTHuuOg2",
       "id": 2
+    },
+    {
+      "email": "lucas@mail.com",
+      "password": "$2a$10$QhlDOscNKGw6qHhaXn7IUuL.0i0vvoWX87mFeQksGX7vCvRMV08Oy",
+      "name": "Lucas",
+      "id": 3
     }
   ]
 }
