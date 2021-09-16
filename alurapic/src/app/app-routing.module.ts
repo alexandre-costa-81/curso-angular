@@ -4,8 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
+import { SignInComponent } from './home/signin/signin.component';
+import { Shared/vmessageDirective } from './shared/vmessage.directive';
 
 const routes: Routes = [
+  {path: '', component: SignInComponent},
   {path: 'user/:userName', component: PhotoListComponent},
   {path: 'p/add', component: PhotoFormComponent},
   {path: '**', component: NotFoundComponent}
@@ -13,6 +16,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+   declarations: [
+    "Shared/vmessageDirective"
+  ]
 })
 export class AppRoutingModule { }
