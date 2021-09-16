@@ -29,7 +29,11 @@ export class UserService {
     if (token !== null) {
       const user: User = jwt_decode(token) as User;
       this.userSubject.next(user);
-      console.log(user);
     }
+  }
+
+  logout() {
+    this.tokenService.removeToken();
+    this.userSubject.next(null);
   }
 }

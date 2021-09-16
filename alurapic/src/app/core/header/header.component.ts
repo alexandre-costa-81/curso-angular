@@ -3,18 +3,28 @@ import { Component } from "@angular/core";
 import { Observable } from 'rxjs';
 import { User } from '../user/user';
 
+import { faCoffee, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
 
-  user$: Observable<User | null>;
-  user: User | null;
+  faUserCircle = faUserCircle;
 
-  constructor(userService: UserService) {
-    this.user = null;
+  user$: Observable<User | null>;
+
+  constructor(
+    private userService: UserService,
+    private router: Router) {
+
     this.user$ = userService.getUser();
-    this.user$.subscribe(user => this.user = user);
   }
+
+  logout() {
+    this.userService.logout();
+    this.router.navigate(['']);
+}
 }
