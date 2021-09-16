@@ -2,34 +2,39 @@
   "photos": [
     {
       "id": 1,
-      "userName": "flavio",
+      "userName": "flavio@mail.com",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sultan_the_Barbary_Lion.jpg/440px-Sultan_the_Barbary_Lion.jpg",
       "description": "Leão"
     },
     {
       "id": 2,
-      "userName": "flavio",
+      "userName": "flavio@mail.com",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sultan_the_Barbary_Lion.jpg/440px-Sultan_the_Barbary_Lion.jpg",
       "description": "Leoa"
     },
     {
       "id": 3,
-      "userName": "almeida",
+      "userName": "jose@mail.com",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lioness_Etosha_NP.jpg/500px-Lioness_Etosha_NP.jpg",
       "description": "Leão"
     },
     {
       "id": 4,
-      "userName": "almeida",
+      "userName": "jose@mail.com",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lioness_Etosha_NP.jpg/500px-Lioness_Etosha_NP.jpg",
       "description": "Leoa"
     }
   ],
-  "user": [
+  "users": [
     {
-      "id": 1,
-      "userName": "flavio",
-      "password": "123"
+      "email": "flavio@mail.com",
+      "password": "$2a$10$uCvXWr3/F7aH6KngeJ2ZC.aPqRB9ZPRTEaq/b.8ILZLujFO9VUQ0m",
+      "id": 1
+    },
+    {
+      "email": "jose@mail.com",
+      "password": "$2a$10$EGaQitIM2Whktp4j7uYu4ONSlL.FvQBMIyRerV/FHh7qKuTHuuOg2",
+      "id": 2
     }
   ]
 }

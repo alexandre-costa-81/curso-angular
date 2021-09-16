@@ -1,7 +1,8 @@
-import { AuthService } from './../../core/auth.service';
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
+
+import { AuthService } from './../../core/auth.service';
 
 @Component({
   templateUrl: './signin.component.html'
@@ -11,6 +12,7 @@ export class SignInComponent implements OnInit {
     userName: new FormControl(''),
     password: new FormControl('')
   });
+  @ViewChild('userNameInput') userNameInput: ElementRef<HTMLInputElement> | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -29,17 +31,11 @@ export class SignInComponent implements OnInit {
     const password = this.loginForm.get('password')?.value;
 
     this.authservice.authenticate(userName, password).subscribe(
-      res => {
-        if (Object.keys(res).length > 0) {
-          this.router.navigate(['user', userName]);
-        } else {
-          console.log(res);
-          this.loginForm.reset();
-        }
-      },
+      res => this.router.navigate(['user', userName]),
       err => {
-        console.log(err);
         this.loginForm.reset();
+        this.userNameInput?.nativeElement.focus();
+        alert('Invalid user name or password')
       }
     );
   }
