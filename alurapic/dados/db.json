@@ -24,5 +24,12 @@
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lioness_Etosha_NP.jpg/500px-Lioness_Etosha_NP.jpg",
       "description": "Leoa"
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "userName": "flavio",
+      "password": "123"
+    }
   ]
 }
