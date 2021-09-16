@@ -27,11 +27,13 @@
   ],
   "users": [
     {
+      "nome": "Flávio",
       "email": "flavio@mail.com",
       "password": "$2a$10$uCvXWr3/F7aH6KngeJ2ZC.aPqRB9ZPRTEaq/b.8ILZLujFO9VUQ0m",
       "id": 1
     },
     {
+      "nome": "José",
       "email": "jose@mail.com",
       "password": "$2a$10$EGaQitIM2Whktp4j7uYu4ONSlL.FvQBMIyRerV/FHh7qKuTHuuOg2",
       "id": 2
