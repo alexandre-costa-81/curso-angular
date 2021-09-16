@@ -1,11 +1,10 @@
-import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { SignInComponent } from './home/signin/signin.component';
-import { Shared/vmessageDirective } from './shared/vmessage.directive';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', component: SignInComponent},
@@ -16,9 +15,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-   declarations: [
-    "Shared/vmessageDirective"
-  ]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
