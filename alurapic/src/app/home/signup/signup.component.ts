@@ -1,6 +1,7 @@
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validator';
+import { UserNotTakenValidatorService } from './user-not-taken.validator.service';
 
 @Component({
   templateUrl: './signup.component.html'
@@ -9,7 +10,9 @@ export class SignUpComponent implements OnInit {
 
   signupForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private userNotTakenValidatorService: UserNotTakenValidatorService) {
     this.signupForm = new FormGroup({
       email: new FormControl(''),
       fullName: new FormControl(''),
@@ -24,7 +27,8 @@ export class SignUpComponent implements OnInit {
         [
           Validators.required,
           Validators.email
-        ]
+        ],
+        this.userNotTakenValidatorService.checkUserNameTaken()
       ],
       fullName: ['',
         [
