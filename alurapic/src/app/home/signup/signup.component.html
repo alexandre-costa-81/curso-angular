@@ -32,20 +32,20 @@
   <div class="form-group">
       <input formControlName="userName" class="form-control" placeholder="user name">
       <app-vmessage
-          *ngIf="signupForm?.get('userName')?.errors?.required"
+          *ngIf="signupForm.get('userName')?.errors?.required"
           text="Username is required!">
       </app-vmessage>
       <app-vmessage
-          *ngIf="signupForm?.get('userName')?.errors?.minlength"
+          *ngIf="signupForm.get('userName')?.errors?.minlength"
           text="Minimum length is 2">
       </app-vmessage>
       <app-vmessage
-          *ngIf="signupForm?.get('userName')?.errors?.maxlength"
+          *ngIf="signupForm.get('userName')?.errors?.maxlength"
           text="Maximum length is 30">
       </app-vmessage>
       <app-vmessage
-          *ngIf="signupForm?.get('userName')?.errors?.pattern"
-          text="Must be lowercase">
+        *ngIf="signupForm.get('userName')?.errors?.lowerCase"
+        text="Must be lowercase and no spaces">
       </app-vmessage>
   </div>
 
