@@ -27,22 +27,28 @@
   ],
   "users": [
     {
-      "nome": "Flávio",
+      "name": "Flávio",
       "email": "flavio@mail.com",
       "password": "$2a$10$uCvXWr3/F7aH6KngeJ2ZC.aPqRB9ZPRTEaq/b.8ILZLujFO9VUQ0m",
       "id": 1
     },
     {
-      "nome": "José",
+      "name": "José",
       "email": "jose@mail.com",
       "password": "$2a$10$EGaQitIM2Whktp4j7uYu4ONSlL.FvQBMIyRerV/FHh7qKuTHuuOg2",
       "id": 2
     },
     {
+      "name": "Lucas",
       "email": "lucas@mail.com",
       "password": "$2a$10$QhlDOscNKGw6qHhaXn7IUuL.0i0vvoWX87mFeQksGX7vCvRMV08Oy",
-      "name": "Lucas",
       "id": 3
+    },
+    {
+      "email": "alberto@mail.com",
+      "password": "$2a$10$xgpJ34UXtL1LouKp37P6nO7SBFQVjsrRrPgJOlsNbTyNcRH0L1oau",
+      "name": "Alberto",
+      "id": 4
     }
   ]
 }

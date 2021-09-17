@@ -1,3 +1,4 @@
+import { NewUser } from './new-user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -11,5 +12,9 @@ export class SignUpService {
   checkUserNameTaken(userName: string) {
 
     return this.http.get(API_URL + '/users?email=' + userName);
+  }
+
+  signup(newUser: NewUser) {
+    return this.http.post(API_URL + '/signup', newUser);
   }
 }
