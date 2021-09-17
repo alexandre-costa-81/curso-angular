@@ -24,7 +24,6 @@ export class SignInComponent implements OnInit {
       userName: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     });
-    console.log(this.userNameInput? 'verdadeiro':'falso');
     this.userNameInput?.nativeElement.focus();
   }
 
